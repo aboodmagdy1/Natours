@@ -1,0 +1,32 @@
+doctype  html
+html 
+    head
+        block head 
+            //- meta(http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src-elem 'self'")
+            meta(http-equiv="X-UA-Compatible" content="IE=edge")
+            meta(charset='UTF-8')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            link( rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+            link(rel='stylesheet', href='/css/style.css')
+            link(rel='shortcut icon', href='/img/favicon.png', type="image/png")
+
+            //- interpolation #{} - adding javascript variable to Strings
+            //- title Natours | #{tour}
+            title Natours | #{title}
+    body 
+        // HEADER
+        include _header
+        
+            
+        // CONTENT
+        block content
+            
+
+        // FOOTER
+        include _footer
+        //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+        //- script(src='/js/mapbox.js')
+        //- script(src='/js/login.js')
+        script(src="https://js.stripe.com/v3/")
+        script(src='/js/bundled/index.js')
+
