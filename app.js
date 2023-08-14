@@ -16,9 +16,8 @@ const userRouter = require('./routes/userRoutes');
 const tourRouter = require('./routes/tourRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
-const viewsRouter = require('./routes/viewsRoutes')
-var cookieParser = require('cookie-parser')
-
+const viewsRouter = require('./routes/viewsRoutes');
+var cookieParser = require('cookie-parser');
 
 const app = express();
 //Use helmet to protect HTTP Header
@@ -59,8 +58,8 @@ app.use('/api', limiter);
 //Body parser
 //in this middleware we can make some options to limit the res amount of data in the body
 app.use(express.json({ limit: '10kb' })); //this is a middleware to parse the incoming resquest and put the parsed data in the req.body
-app.use(cookieParser());//parses the data form cookies 
-app.use(express.urlencoded({extended :true,limit : '10kb'}))//parses data that comming from urlencodded form 
+app.use(cookieParser()); //parses the data form cookies
+app.use(express.urlencoded({ extended: true, limit: '10kb' })); //parses data that comming from urlencodded form
 
 // Data sanitization against NOSQL query injection
 app.use(mongoSanitize());
@@ -82,23 +81,23 @@ app.use(
   })
 );
 
-//test middleware 
+//test middleware
+app.use((req, res, next) => {
+  req.requestTime = new Date().toISOString();
+  next();
+});
+// //test middleware
 app.use((req,res,next)=>{
-  req.requestTime = new Date().toISOString()
+  console.log(req.cookies)
   next()
 })
-// //test middleware
-// app.use((req,res,next)=>{
-//   console.log(req.cookies)
-//   next()
-// })
 
 //2) Routes
-app.use('/',viewsRouter)
+app.use('/', viewsRouter);
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
-app.use('/api/v1/bookings',bookingRouter)
+app.use('/api/v1/bookings', bookingRouter);
 
 //catch the error
 app.all('*', (req, res, next) => {
