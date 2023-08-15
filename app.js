@@ -84,13 +84,14 @@ app.use(
 //test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
+  console.log(req.requestTime);
   next();
 });
 // //test middleware
-app.use((req,res,next)=>{
-  console.log(req.cookies)
-  next()
-})
+app.use((req, res, next) => {
+  console.log(req.cookies);
+  next();
+});
 
 //2) Routes
 app.use('/', viewsRouter);
