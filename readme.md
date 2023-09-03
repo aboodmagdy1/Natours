@@ -140,39 +140,6 @@ Get Tours Within Radius 👉🏻 https://lgope-natours.onrender.com/api/v1/tours
 * And More! There's always room for improvement!
 
 ## Setting Up Your Local Environment ⚙️
-
-If you wish to play around with the code base in your local environment, do the following
-
-```
-* Clone this repo to your local machine.
-* Using the terminal, navigate to the cloned repo.
-* Install all the necessary dependencies, as stipulated in the package.json file.
-* If you don't already have one, set up accounts with: MONGODB, MAPBOX, STRIPE, SENDGRID, and MAILTRAP. Please ensure to have at least basic knowledge of how these services work.
-* In your .env file, set environment variables for the following:
-    * DATABASE=your Mongodb database URL
-    * DATABASE_PASSWORD=your MongoDB password
-
-    * SECRET=your JSON web token secret
-    * JWT_EXPIRES_IN=90d
-    * JWT_COOKIE_EXPIRES_IN=90
-
-    * EMAIL_USERNAME=your mailtrap username
-    * EMAIL_PASSWORD=your mailtrap password
-    * EMAIL_HOST=smtp.mailtrap.io
-    * EMAIL_PORT=2525
-    * EMAIL_FROM=your real-life email address
-
-    * SENDGRID_USERNAME=apikey
-    * SENDGRID_PASSWORD=your sendgrid password
-
-    * STRIPE_SECRET_KEY=your stripe secret key
-    * STRIPE_WEBHOOK_SECRET=your stripe webhook secret
-
-* Start the server.
-* Your app should be running just fine.
-```
-
-#### Demo-`.env` file :
 ![demo-env-file](https://github.com/lgope/Natours/assets/58518192/cf5b833f-2a48-48a1-aeb3-5ffea8967e33)
 
 
