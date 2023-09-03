@@ -113,26 +113,6 @@ Get Top 5 Cheap Tours 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/t
 Get Tours Within Radius 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
 
 
-
-## Deployment 🌍
-The website is deployed with git into Heroku. Below are the steps taken:
-```
-git init
-git add -A
-git commit -m "Commit message"
-heroku login
-heroku create
-heroku config:set CONFIG_KEY=CONFIG_VALUE
-parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js
-git push heroku master
-heroku open
-```
-You can also change your website URL by running this command:
-```
-heroku apps: rename natours-users
-```
-
-
 ## Build With 🏗️
 
 * [NodeJS](https://nodejs.org/en/) - JS runtime environment
@@ -145,7 +125,6 @@ heroku apps: rename natours-users
 * [Stripe](https://stripe.com/) - Online payment API and Making payments on the app.
 * [Postman](https://www.getpostman.com/) - API testing
 * [Mailtrap](https://mailtrap.io/) & [Sendgrid](https://sendgrid.com/) - Email delivery platform
-* [Heroku](https://www.heroku.com/) - Cloud platform
 * [Mapbox](https://www.mapbox.com/) - Displaying the different locations of each tour.
 
 
