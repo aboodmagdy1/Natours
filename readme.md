@@ -92,27 +92,6 @@
 * You can update your own username, profile photo, email, and password.
 
 
-
-## API Usage
-Before using the API, you need to set the variables in Postman depending on your environment (development or production). Simply add: 
-  ```
-  - {{URL}} with your hostname as value (Eg. http://127.0.0.1:3000 or http://www.example.com)
-  - {{password}} with your user password as value.
-  ```
-
-Check [Natours API Documentation](https://documenter.getpostman.com/view/8893042/SW7c37V6) for more info.
-
-<b> API Features: </b>
-
-Tours List 👉🏻 https://lgope-natours.onrender.com/api/v1/tours
-
-Tours State 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/tour-stats
-
-Get Top 5 Cheap Tours 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/top-5-cheap
-
-Get Tours Within Radius 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
-
-
 ## Build With 🏗️
 
 * [NodeJS](https://nodejs.org/en/) - JS runtime environment
@@ -129,15 +108,6 @@ Get Tours Within Radius 👉🏻 https://lgope-natours.onrender.com/api/v1/tours
 
 
 
-## To-do 🗒️
-
-* Review and rating
-  - Allow users to add a review directly at the website after they have taken a tour
-* Booking
-  - Prevent duplicate bookings after a user has booked that exact tour, implement favorite tours
-* Advanced authentication features
-  - Signup, confirm user email, log in with refresh token, two-factor authentication
-* And More! There's always room for improvement!
 
 ## Setting Up Your Local Environment ⚙️
 ![demo-env-file](https://github.com/lgope/Natours/assets/58518192/cf5b833f-2a48-48a1-aeb3-5ffea8967e33)
